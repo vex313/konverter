@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+
+<head>
+
+    
+    <title>moj konverter</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="display-4 text-center mb-4">
+                    KONVERTER KUNA U EURE I DOLARE ZA MATVIXOV NOVI KONCERT U AMSTERDAMU I AMERICI
+                </h1>
+                <form>
+                    <div class="form-group">
+                        <input id="dollarinput" class="form-control form-control-lg" type="number"
+                            placeholder="tu idu kune..">
+                    </div>
+                </form>
+
+                <div id="output">
+                    <div class="card card-1 mb-2">
+                        <div class="card-block">
+                            <h4>Euro:</h4>
+                            <div id="euroOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="card card-2 mb-2">
+                        <div class="card-block">
+                            <h4>USD:</h4>
+                            <div id="usdOutput"></div>
+                        </div>
+                  
+                        </div>
+                    </div>
+                </div>
+          
+
+    <script>document.getElementById("output").style.visibility = "hidden";
+
+document.getElementById("dollarinput").addEventListener("input", function(e){
+    document.getElementById("output").style.visibility = "visible";
+    let dollars = e.target.value;
+    document.getElementById("euroOutput").innerHTML = dollars/7.2;
+  document.getElementById("usdOutput").innerHTML = dollars/6.2;
+
+}); </script>
+</body>
+
+</html> 
